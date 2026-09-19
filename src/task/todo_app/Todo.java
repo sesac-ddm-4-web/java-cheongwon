@@ -1,5 +1,7 @@
 package task.todo_app;
 
+import java.util.List;
+
 public class Todo {
     private int num;
     private String title;
@@ -25,5 +27,12 @@ public class Todo {
 
     public Status getStatus() {
         return status;
+    }
+
+    public static Todo findTodo(List<Todo> todoList, int targetId){
+        for(Todo todo : todoList){
+            if(todo.getNum() == targetId) return todo;
+        }
+        return null;
     }
 }

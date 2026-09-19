@@ -55,16 +55,8 @@ public class TaskApp {
                     case 4: {
                         int targetId = readInt(scanner, "완료할 번호: ");
                         // TODO: 번호로 찾은 항목을 완료 처리하세요.
-                        boolean exists = false;
 
-                        for (Todo todo : todoList) {
-                            if (todo.getNum() == targetId) {
-                                exists = true;
-                                break;
-                            }
-                        }
-
-                        if(!exists ||
+                        if((Todo.findTodo(todoList,targetId)!=null) ||
                                 todoList.get(targetId-1).getStatus().equals(Status.COMPLETE)){
                             System.out.println("없는 번호이거나 이미 완료된 항목입니다.");
                             continue;
