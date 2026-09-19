@@ -18,7 +18,6 @@ public class CafeReportApp {
         Path output = Path.of("out", "cafe-report.txt");
 
         // TODO: 전체·지점별·메뉴별 결과를 저장할 변수를 준비하세요.
-        Branch totalBranch = new Branch("total");
         List<Branch> branches = new ArrayList<>();
         Map<String,Item> items = new LinkedHashMap<>();
 
