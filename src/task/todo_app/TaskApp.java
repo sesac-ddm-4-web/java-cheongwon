@@ -13,11 +13,11 @@ public class TaskApp {
             todoList.add(new Todo(1, "자바 복습",Status.INCOMPLETE));
             todoList.add(new Todo(2, "예외 처리 정리",Status.COMPLETE));
             todoList.add(new Todo(3, "파일 입출력 예제 실행",Status.INCOMPLETE));
+            int cnt = 3;
 
             while (running) {
                 printMenu();
                 int menu = readInt(scanner, "선택: ");
-                int cnt = 3;
 
                 switch (menu) {
                     case 1: {
