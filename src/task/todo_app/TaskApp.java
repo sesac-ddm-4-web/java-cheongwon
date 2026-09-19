@@ -66,10 +66,12 @@ public class TaskApp {
                     }
                     case 5:
                         // TODO: 전체·완료·미완료 개수를 출력하세요.
-                        int compCount = 0;
-                        for(Todo todo : todoList){
-                            if(todo.getStatus().equals(Status.COMPLETE)) compCount++;
-                        }
+
+                        long compCount = todoList.stream()
+                                .filter(Todo::isComplecated)
+                                .count();
+
+
                         System.out.println("전체: " + todoList.size());
                         System.out.println("완료: " + compCount);
                         System.out.println("미완료: " + (todoList.size()-compCount));

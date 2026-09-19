@@ -35,4 +35,9 @@ public class Todo {
         }
         return null;
     }
+
+    public boolean isComplecated(){
+        if(this.getStatus().equals(Status.COMPLETE)) return true;
+        else return false;
+    }
 }
