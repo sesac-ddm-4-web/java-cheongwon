@@ -1,5 +1,5 @@
 # 구조
 
-## lesson : 수업시간 실습
+## 수업시간 실습 : lesson
 
-## task : 과제
+## 과제 : src/task/cote
